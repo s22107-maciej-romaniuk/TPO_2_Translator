@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GUI.Controller">
+   <children>
+      <TextField fx:id="polishWordField" GridPane.columnIndex="1" />
+      <TextField fx:id="languageCodeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="Polish word" />
+      <Label text="Language code" GridPane.rowIndex="1" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <children>
+            <Button mnemonicParsing="false" onAction="#sendRequest" text="Request translation" />
+         </children>
+      </HBox>
+      <TextField fx:id="translationField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label text="Translation" GridPane.rowIndex="3" />
+   </children>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints />
+   </columnConstraints>
+</GridPane>
