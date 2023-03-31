@@ -9,9 +9,10 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ProxyServer {
 
     public static void main(String[] args) {
+        int port = Integer.parseInt(args[0]);
         Map<String, ProxyJob> jobs = new ConcurrentHashMap<>();
         Map<String, String> addressBook = new ConcurrentHashMap<>();
-        try (ServerSocket listeningSocket = new ServerSocket(7777)){
+        try (ServerSocket listeningSocket = new ServerSocket(port)){
             while(true){
                 Socket socket = listeningSocket.accept();
                 System.out.println("connection detected");

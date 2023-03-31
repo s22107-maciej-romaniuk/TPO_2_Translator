@@ -15,7 +15,7 @@
          </children>
       </HBox>
       <TextField fx:id="translationField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Label text="Translation" GridPane.rowIndex="3" />
+      <Label fx:id="translationLabel" text="Translation" GridPane.rowIndex="3" />
    </children>
    <rowConstraints>
       <RowConstraints />
